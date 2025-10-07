@@ -33,3 +33,7 @@ Twitter Clone is a simple social media application built with React and Firebase
 ---
 
 ## Screenshots
+![screen01](https://github.com/user-attachments/assets/c1ae8358-267c-48a7-aa4f-2817288dfee0)
+
+![screen02](https://github.com/user-attachments/assets/20a5da36-0f3f-42f1-afa3-22c680dc265d)
+
