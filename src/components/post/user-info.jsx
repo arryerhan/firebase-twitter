@@ -1,0 +1,26 @@
+import { MdEdit } from "react-icons/md";
+import { getUserName } from "../../utils/helpers";
+import moment from "moment";
+
+const UserInfo = ({ tweet }) => {
+  const date = tweet?.createdAt
+    ? moment(tweet.createdAt.toDate()).fromNow()
+    : "No date";
+
+  return (
+    <div className="flex gap-2 items-center whitespace-nowrap text-gray-400">
+      <p className="text-white font-semibold">{tweet.user?.name || "Erhan Local"}</p>
+      <p className="text-sm">{getUserName(tweet.user?.name || "Erhan_Local")}</p>
+      <p className="text-sm">{date}</p>
+
+      {tweet?.isEdited && (
+        <p>
+          <MdEdit className="md:hidden" />
+          <span className="max-md:hidden">* Edited</span>
+        </p>
+      )}
+    </div>
+  );
+};
+
+export default UserInfo;
